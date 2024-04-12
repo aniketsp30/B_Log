@@ -1,0 +1,47 @@
+<div class="admin-title">
+    <a href="/add-post" class="button Add">+ ADD NEW</a>
+</div>
+<script>
+    var data=localStorage.getItem("user_"); 
+    
+</script>
+<% data.forEach(post => { %>
+    <tr>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title ">
+                <%= post.title %></h1>
+            <b>
+                <p class="card-text">
+                Date: <%= post.createdAt.toDateString() %>    
+                </p>
+            </b>
+            <div class="admin_editBTN">
+                <table>
+                    <tr>
+
+                        <td>
+                            <a href="edit-post/<%= post._id %>">
+                                <button name="edit" class="update view">Edit</button>
+                            </a>
+                        </td>
+                        <td>
+                            <form action="/delete-post/<%= post._id %>" method="POST">
+                                <input type="text" hidden name="username" id="username" value="<%= post.userId %>">  
+                                <input type="submit" class="update view" value="Delete">
+                            </form>
+                        </td>
+                        <td>
+                            <a href="../posted/<%= post._id %>">
+                                <button name="detail" class="update view">View</button>
+                            </a>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>    
+        </div>
+        </tr>
+    </div>
+    <% }) %>
+    

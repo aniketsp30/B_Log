@@ -1,0 +1,91 @@
+<div class="login_card" onload="Logdisplay()">
+<script>
+
+    function lsdisplay(){
+        const signUp=document.getElementById('sign');
+        const login=document.getElementById('log');
+        const signBtn=document.getElementById('signing');
+        const logBtn=document.getElementById('loging');
+        if (signUp.style.display === "none") {
+            signUp.style.display = "block";
+            login.style.display = "none";
+            signBtn.style.display="block";
+            logBtn.style.display="none";
+          }else{
+            signUp.style.display = "none";
+            login.style.display = "block";
+            signBtn.style.display="none";
+            logBtn.style.display="block";
+
+          } 
+        }
+    </script>
+    <script>
+        function display(){
+        let use=document.getElementById("name").value;
+
+        console.log(use);
+        localStorage.setItem("user_",use);
+
+        }
+    </script>
+    <style>
+        .displayBtn{
+            background-color: antiquewhite;
+            width: 200px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+        }
+        p{
+            font-size: small;
+        }
+
+    </style>
+<div class="login">
+   
+    <br> <br>       
+    <span id="log">
+        <form  method="POST" action="/dashboard" onclick="display()" class="w3-container"> 
+            <div class=" w3-green">
+              <h2 style="padding-left:20%;">Login</h2>
+            </div>    
+            <label for="username">Username</label>
+            <input  class="inUser" id="name" type="text" name="username"><br><br>
+           
+
+            <label for="password">Password</label>
+            <input class="inUser" type="password" name="password"><br>
+
+            <input type="submit" class="Log_button" style="vertical-align:middle" value="Login">
+        </form>
+    </span>
+    <div class="displayBtn">
+        <div id="signing" style="display: none;">
+            <button id="signup"  onclick="lsdisplay()" class=" view">Sign in </button>
+            <p>Already have an account?</p>
+        </div>
+        <div id="loging">
+            <button id="login"  onclick="lsdisplay()" class="view ">Register </button>
+            <p>Don't have account?</p>
+        </div>
+    </div>
+    <span id="sign" style="display: none;" >
+        <form class="w3-container" method="POST" action="/register">
+
+            <div class="w3-container w3-green">
+                <h2 style="padding-left:20%;">Register</h2>
+            </div>
+            <label for="username" >Username</label>
+            <input class="inUser" type="text" name="username"><br><br>
+
+            <label for="password">Password</label>
+            <input class="inUser" type="password" name="password"><br>
+
+            <input type="submit" class="Log_button" style="vertical-align:middle" value="Register">
+    </form>
+</span>
+
+    </div>
+</div> 

@@ -1,0 +1,215 @@
+body{
+    background-image:url("../img/backg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_card{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.login{
+padding: 30px;
+width: fit-content;
+border-radius: 40px;
+display: flex;
+justify-content: center;
+height: max-content;
+margin: 10px;
+backdrop-filter:blur(10px);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: larger;
+}
+
+#signUp::after{
+  background-color: #10b9b9;
+
+}
+
+.topnav{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  backdrop-filter:blur(1px);
+}
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    width: fit-content;
+  }
+
+  
+  
+  /* Change the color of links on hover */
+  .topnav .tab:hover {
+    background-color: #d1b205;
+    color: black;
+    border-radius: 40px;
+  }
+  .logout{
+    border-radius: 50px;
+  }
+  .topnav .logout:hover{
+    background-color: #ec4a4a;
+    color: black;
+    border-radius: 50px;
+  }
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #10b9b9;
+    color: white;
+    border-radius: 50px;
+
+  }
+  .card {
+    padding-left: 30px;
+    margin: 13px 285px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgb(157, 194, 194);
+    border: 2px brown solid;
+    border-radius: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card:hover{
+ background-color: #93fafa;
+ ;
+}
+
+.view {
+  color: black;
+    background-color: #10b9b9;
+    border: 2px rgb(19, 1, 19) solid;
+    text-decoration: none !important;
+    border-radius: 20px;
+    padding: 10px 25px;
+    transition: all 0.6s;
+    height: 50px;
+    width: 100px;
+}
+
+.view:hover {
+    background-color: #076767;
+    color: white;
+}
+
+.rounded-circle-1 {
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin-top: -12px;
+    height: 45px;
+    width: 45px;
+}
+.button {
+  position: fixed;
+  background-color: #11474b;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-left: 80%;
+  font-size: larger;
+  height: 40px;
+  width: 180px;
+  text-align:center;
+  padding-top: 18px;
+}
+
+.admin_editBTN{
+  display: flex;
+  justify-content: center;
+}
+
+.Log_button {
+  background-color: #1f8892;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: larger;
+  height: max-content;
+  width: 180px;
+  padding: 5px;
+  margin: 50px;
+}
+.Log_button:hover{
+  background-color: #93fafa;
+  color: black;
+}
+
+.button:hover {
+  color: #f2f2f2;
+  background-color: #8d290b;
+}
+label{
+  margin: 20px;
+}
+
+.ContainerRegister{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  padding-left: 15%;
+  padding-top: 20px;
+}
+
+.update{
+  background-color: #10b9b9;
+  margin-left: 50px;
+}
+.admin-post-control{
+  margin-left: auto;
+}
+.card-body{
+  height: 80px;
+  width: fit-content;
+  
+}
+.New_Post{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; 
+}
+.edits{
+  border-radius: 40px;
+  padding: 30px;
+  backdrop-filter:blur(5px);
+  border: solid black 2px;
+  margin: 40px;
+  font-size: larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.change_btn{
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+.inUser{
+  width: max-content;
+  margin-left: 10px;
+  margin-right: 10px;
+}

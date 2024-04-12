@@ -1,0 +1,25 @@
+<div class="New_Post">
+        <form class="edits" method="post" action="/edit-post/<%= data._id %>?_method=PUT">
+        <h1 style="padding-left: 25%;">VIEW / EDIT POST</h1><br>
+        <label for="title">Title</label>
+        <input style="border-radius: 10px;width:80%" type="text" placeholder="Post Title" name="title" value="<%= data.title %>">
+        <br><br>
+        <label for="body" >Description</label>
+        <textarea style="border-radius: 10px;" name="body" cols="50" rows="10" placeholder="Post Body" name="title" ><%= data.body %></textarea>
+        <Br>
+            <input type="text" hidden name="username" id="username">  
+        <div class="change_btn">
+            <input type="submit"  value="Update" class="update view">
+        </div>        
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        if(localStorage.getItem('user_')){
+            document.getElementById("username").value=localStorage.getItem("user_");
+        }
+        else{
+            alert("please login");
+        }
+    })
+</script>

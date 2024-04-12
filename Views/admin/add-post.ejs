@@ -1,0 +1,36 @@
+<div class="New_Post">
+    <div id="disp"></div>
+    <!--<script>
+        var data=localStorage.getItem("user_");
+        //testing
+        document.getElementById("disp").innerHTML=data;
+
+        var datas=document.getElementById('users');
+        datas.value=data;
+        
+    </script>-->
+    <form method="post" action="/add-post">
+        <h2 style="padding-left: 25%;">ADD NEW POST</h2>
+        <label for="title">Title</label>
+        <input type="text"  placeholder="Post Title" name="title" aria-valuetext="game" id="title">
+        <br><br>
+        <label for="body" >Description</label>
+        <textarea name="body" cols="50" rows="10" placeholder="Post Body" name="title"></textarea>
+        <Br>
+        <input type="text" hidden name="username" id="username">  
+        <div>
+            <a href="/dasboard" ><button class="update view">BACK</button></a>
+            <input type="submit"  value="ADD" onload="display()" class="update view">
+        </div>        
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        if(localStorage.getItem('user_')){
+            document.getElementById("username").value=localStorage.getItem("user_");
+        }
+        else{
+            alert("please login");
+        }
+    })
+</script>

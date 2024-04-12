@@ -1,0 +1,21 @@
+<a class="button Add" href="admin">New Blog</a>
+
+<% data.forEach(post => { %>
+<tr>
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title ">
+            <%= post.title %></h1>
+        <b>
+            <p class="card-text">
+            Date: <%= post.createdAt.toDateString() %>    
+            </p>
+        </b>
+        <a href="posted/<%= post._id %>">
+            <button name="detail" class="mt-3 btn view">View</button>
+        </a>
+    </div>
+    </tr>
+</div>
+<% }) %>
+
